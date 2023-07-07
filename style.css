@@ -522,6 +522,7 @@ main {
 }
 
 .why-swipe-section .card-container .card {
+    display: flex;
     width: 25%;
     padding: 0 var(--spacing-s) 0 0;
     margin: 0 var(--spacing-m) 0 0;
@@ -784,18 +785,115 @@ main {
     margin: 0 var(--spacing-s) 0 0;
 }
 
+/* RESPONSIVE */
+
 @media only screen and (max-width: 1144px) {
     .section-container {
         padding: 0 var(--spacing-m);
     }
 }
 
+@media only screen and (max-width: 850px) {
+    .partners-grid img {
+        width: 100%;
+        height: auto;
+    }
+
+    .integration-section .col-left {
+        width: 60%;
+    }
+
+    .integration-section .col-right {
+        width: 40%;
+    }
+}
+
 /* TABLET SIZE */
 
 @media only screen and (max-width: 768px) {
+    :root {
+        --h1-size: 64px;
+        --h1-height: 72px;
+        --h3-size: 34px;
+    }
+
+    /* UNIFIED PLATFORM */
+
+    .unified-platform-section h2 {
+        width: 100%;
+    }
+
+    /* INTEGRATION SECTION */
+
+    .integration-section .card-container {
+        flex-direction: column;
+    }
+
+    .integration-section .card-container .card {
+        width: 100%;
+    }
+
+    /* WHY SWIPE */
+
+    .why-swipe-section .card-container .card {
+        width: 50%;
+        margin: var(--spacing-m) 0;
+    }
+
+    .why-swipe-section .card-container {
+        flex-wrap: wrap;
+    }
 }
 
 /* MOBILE SIZE */
 
 @media only screen and (max-width: 550px) {
+    /* PARTNERS GRID */
+
+    .partners-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .two-columns {
+        flex-direction: column;
+    }
+
+    .two-columns .col-left {
+        width: 100%;
+    }
+
+    .two-columns .col-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* UNIFIED PLATFORM */
+
+    .unified-platform-section h2 {
+        width: 100%;
+    }
+
+    /* INTEGRATION SECTION */
+
+    .integration-section .col-right {
+        display: none;
+    }
+
+    /* WHY SWIPE SECTION */
+
+    .why-swipe-section .card-container .card {
+        width: 100%;
+        margin: var(--spacing-s) 0;
+    }
+
+    .why-swipe-section .card-container .card .icon {
+        height: 35px;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
 }
