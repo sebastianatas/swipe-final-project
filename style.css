@@ -321,10 +321,10 @@ p {
     top: -600px;
     left: -50%;
     z-index: -1;
-    --gradient-color-1: #0e87d8;
+    --gradient-color-1: #0ed8d8;
     --gradient-color-2: #3c7dd1;
-    --gradient-color-3: #283be2;
-    --gradient-color-4: #155cb8;
+    --gradient-color-3: #d86868;
+    --gradient-color-4: #c9b24b;
 }
 
 /* HERO STYLES */
