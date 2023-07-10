@@ -45,7 +45,7 @@
     --spacing-xl: 64px;
 
     --standard-width: 1144px;
-
+    --standard-border-radius: 20px;
     --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
     --primary-gradient: linear-gradient(
         101.33deg,
@@ -226,7 +226,7 @@ p {
     letter-spacing: 1.25px;
     font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--standard-border-radius);
     background: var(--primary-accent);
     color: var(--text-light);
     padding: var(--spacing-s) var(--spacing-m);
@@ -244,7 +244,7 @@ p {
     letter-spacing: 1.25px;
     font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: var(--standard-border-radius);
     background: transparent;
     color: var(--primary-accent);
     transition: all 0.25s ease;
@@ -434,24 +434,26 @@ main {
     grid-area: credit-card;
     width: 100%;
     box-shadow: var(--standard-box-shadow);
+    border-radius: var(--standard-border-radius);
 }
 
 #slack-invoice {
     grid-area: slack;
     width: 100%;
     box-shadow: var(--standard-box-shadow);
+    border-radius: var(--standard-border-radius);
 }
 
 #phone {
     grid-area: phone;
     width: 100%;
-    box-shadow: var(--standard-box-shadow);
 }
 
 #dash {
     grid-area: dash;
     width: 100%;
     box-shadow: var(--standard-box-shadow);
+    border-radius: var(--standard-border-radius);
 }
 
 /* INTEGRATION SECTION STYLES */
@@ -515,12 +517,12 @@ main {
 #api-code {
     max-width: 470px;
     margin-bottom: var(--spacing-m);
-    border-radius: 20px;
+    border-radius: var(--standard-border-radius);
 }
 
 #terminal-code {
     max-width: 470px;
-    border-radius: 20px;
+    border-radius: var(--standard-border-radius);
 }
 
 /* WHY SWIPE SECTION */
@@ -642,7 +644,7 @@ main {
     width: 540px;
     height: 446px;
     box-shadow: var(--standard-box-shadow);
-    border-radius: 20px;
+    border-radius: var(--standard-border-radius);
     overflow: hidden;
 }
 
@@ -828,6 +830,16 @@ main {
     .hero .col-right {
         width: 40%;
     }
+
+    /* PARTNERS GRID SECTION */
+
+    .partners-section {
+        margin: -60px 0 0 0;
+    }
+
+    .partners-grid {
+        margin: 0 0 var(--spacing-xl) 0;
+    }
 }
 
 /* CUSTOM BREAKPOINT 850PX */
@@ -891,7 +903,7 @@ main {
         width: 50px;
         height: 30px;
         background-color: rgba(250, 250, 250, 0.25);
-        border-radius: 20px;
+        border-radius: var(--standard-border-radius);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -929,6 +941,12 @@ main {
     .hero-phone {
         height: 450px;
         transform: translateX(32px);
+    }
+
+    /* PARTNERS SECTION */
+
+    .partners-section {
+        margin: -20px 0 0 0;
     }
 
     /* UNIFIED PLATFORM SECTION */
@@ -1043,6 +1061,10 @@ main {
     }
 
     /* PARTNERS GRID */
+
+    .partners-section {
+        margin: var(--spacing-xl) 0 var(--spacing-s) 0;
+    }
 
     .partners-grid {
         grid-template-columns: 1fr 1fr;
